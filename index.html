@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#210b0c">
+<title>開運金爐｜一爐心意，諸願成就</title>
+<style>
+:root{--gold:#f5d58a;--deep:#170708;--red:#651c17}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:#ffe9b6;font-family:"Noto Serif TC","Songti TC",serif;background:radial-gradient(ellipse at 50% 30%,#70241b 0,#2c0d0d 48%,#100506 100%);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.15;background-image:radial-gradient(#f4d28a .7px,transparent .8px);background-size:24px 24px}
+main{width:min(100% - 24px,900px);margin:auto;min-height:100vh;padding:22px 0 30px;text-align:center;position:relative}
+.topline{display:flex;justify-content:space-between;align-items:center;color:#d8b66e;font-size:.78rem;letter-spacing:.25em}
+h1{font-size:clamp(2rem,7vw,3.6rem);letter-spacing:.15em;margin:14px 0 4px;text-shadow:0 0 24px #f4c45c66}
+.subtitle{letter-spacing:.22em;color:#e8c98a}.intro{color:#d3b89b;line-height:1.8;font-size:.92rem}
+.stage{height:470px;position:relative;max-width:800px;margin:0 auto;overflow:hidden;border-bottom:1px solid #b88a4b55;background:radial-gradient(ellipse at 50% 80%,#e28c2b20,transparent 54%)}
+#fx{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:6}
+.moon{position:absolute;width:300px;height:300px;border:1px solid #e9bc6640;border-radius:50%;left:50%;top:65px;transform:translateX(-50%);box-shadow:0 0 80px #f6b44b17,inset 0 0 60px #f5d58a0a}
+.censer{position:absolute;left:50%;bottom:53px;transform:translateX(-50%);width:300px;height:205px;z-index:3;filter:drop-shadow(0 20px 22px #000b)}
+.censer-bowl{position:absolute;left:27px;top:50px;width:246px;height:115px;border:4px solid #f4d17b;border-radius:13% 13% 48% 48%/10% 10% 70% 70%;background:linear-gradient(90deg,#613014,#b9782b 16%,#f7d887 34%,#9c541b 51%,#f2c66d 72%,#673719);box-shadow:inset 0 -15px 22px #4b210d99,inset 0 8px 15px #fff0b077}
+.censer-bowl:before{content:"";position:absolute;left:-15px;right:-15px;top:-9px;height:22px;border:4px solid #f6d888;border-radius:50%;background:linear-gradient(#f8dfa0,#9c5a21)}
+.censer-bowl:after{content:"開運金爐";position:absolute;left:50%;top:38px;transform:translateX(-50%);padding:4px 13px;border:1px solid #e7c16e;border-radius:20px;background:#591d16;color:#f7d98c;white-space:nowrap;letter-spacing:.18em;font-size:1rem}
+.handle{position:absolute;top:66px;width:58px;height:75px;border:9px ridge #c88c37;border-radius:45%;z-index:-1}
+.handle.left{left:0}.handle.right{right:0}
+.foot{position:absolute;bottom:0;left:82px;width:136px;height:24px;border:3px solid #e7bd69;border-radius:50%;background:linear-gradient(#f5d78c,#8b4c1e)}
+.leg{position:absolute;top:155px;width:25px;height:38px;background:linear-gradient(90deg,#673719,#e7b95d,#82451b);border:2px solid #d9ac5b}.leg.l{left:83px}.leg.r{right:83px}
+.flame-field{position:absolute;left:50%;bottom:195px;transform:translateX(-50%);width:210px;height:210px;z-index:2;pointer-events:none;filter:drop-shadow(0 0 18px #ff7d1a)}
+.flame{position:absolute;bottom:0;left:50%;width:65px;height:155px;transform-origin:50% 100%;border-radius:65% 10% 60% 45%;background:radial-gradient(ellipse at 50% 80%,#fff8b0 0,#ffdf65 18%,#ff9a23 48%,#e9440d 78%,transparent 79%);mix-blend-mode:screen;animation:flameDance .72s ease-in-out infinite alternate}
+.flame:nth-child(2){width:52px;height:120px;transform:translateX(-65px) rotate(-19deg);animation-delay:-.31s}
+.flame:nth-child(3){width:58px;height:140px;transform:translateX(8px) rotate(17deg);animation-delay:-.48s}
+.flame:nth-child(4){width:38px;height:100px;transform:translateX(-26px) rotate(8deg);animation-delay:-.16s}
+@keyframes flameDance{0%{border-radius:65% 10% 60% 45%;height:115px;filter:blur(1px) brightness(1)}50%{border-radius:40% 50% 55% 30%;height:170px;filter:blur(2px) brightness(1.2)}100%{border-radius:60% 25% 35% 60%;height:135px;filter:blur(.5px) brightness(1.1)}}
+.mazu{position:absolute;z-index:5;width:min(55%,330px);height:350px;object-fit:contain;left:50%;top:12px;transform:translateX(-50%) scale(.92);opacity:0;filter:drop-shadow(0 0 28px #ffd16b);mix-blend-mode:screen;pointer-events:none}
+.mazu.show{animation:mazuBless 9s ease-in-out forwards}
+@keyframes mazuBless{0%{opacity:0;transform:translateX(-50%) scale(.82);filter:blur(10px) drop-shadow(0 0 0 #ffd16b)}18%{opacity:.88;transform:translateX(-50%) scale(1);filter:blur(0) drop-shadow(0 0 34px #ffd16b)}68%{opacity:.88}100%{opacity:0;transform:translateX(-50%) scale(1.04);filter:blur(5px) drop-shadow(0 0 24px #ffd16b)}}
+.paper-tray{position:absolute;left:18px;bottom:15px;width:125px;height:55px;border:2px solid #b77d37;background:linear-gradient(135deg,#5a2413,#9b5524);border-radius:4px;z-index:4}
+.paper-tray:before{content:"";position:absolute;left:12px;right:12px;top:-20px;height:36px;background:repeating-linear-gradient(0deg,#eecb78 0 5px,#c68b38 6px 8px);border:1px solid #f6d98e;transform:skewY(-4deg);box-shadow:0 2px 7px #0008}
+.counter{position:absolute;left:18px;top:24px;z-index:7;padding:10px 14px;background:#f4dfb6;color:#54240e;border:2px solid #c18a43;border-radius:4px;box-shadow:0 5px 18px #0006}
+.counter strong{display:block;font-size:1.5rem}.counter small{letter-spacing:.1em}
+.progress{width:115px;height:7px;background:#8b5a31;margin-top:6px;border-radius:9px;overflow:hidden}.bar{height:100%;width:0;background:linear-gradient(90deg,#d17a24,#ffe59b);transition:width .2s}
+.controls{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px;margin:18px auto 8px}
+button{font:inherit;cursor:pointer;min-height:48px;padding:12px 22px;border-radius:4px;letter-spacing:.1em;transition:transform .15s,filter .15s}
+button:active{transform:scale(.97)}button:disabled{opacity:.45;cursor:not-allowed}
+.throw{border:2px solid #f5d78b;color:#ffe7ae;background:linear-gradient(135deg,#9b271b,#5c100f);box-shadow:0 0 22px #e88b2a35;font-size:1.05rem}
+.reset,.sound{background:#35100f;color:#f3d18b;border:1px solid #b8894d}
+#message{min-height:28px;color:#f5d99a;margin:8px}
+.hint{font-size:.78rem;color:#b99b80;line-height:1.8}
+@media(max-width:560px){main{padding-top:16px}.stage{height:410px}.censer{transform:translateX(-50%) scale(.83);transform-origin:bottom center;bottom:42px}.flame-field{bottom:160px;transform:translateX(-50%) scale(.85)}.mazu{height:300px;top:12px;width:65%}.counter{top:12px;left:8px;padding:7px 9px}.counter strong{font-size:1.2rem}.paper-tray{left:8px;transform:scale(.8);transform-origin:left bottom}.controls{gap:8px}.throw{flex:1 1 100%;max-width:340px}.reset,.sound{flex:1 1 35%}}
+@media(prefers-reduced-motion:reduce){.flame{animation-duration:2s}}
+</style></head>
+<body><main>
+<div class="topline"><span>祈願・納福・平安</span><button class="sound" id="soundBtn">♫ 音效：開啟</button></div>
+<h1>開運金爐</h1><div class="subtitle">一爐心意，諸願成就</div>
+<p class="intro">將祝福化作金紙，輕輕投入爐中。<br>每一份心意，都值得被溫柔以待。</p>
+<section class="stage" id="stage" aria-label="互動金爐">
+<div class="moon"></div>
+<div class="counter"><small>已焚化紙錢</small><strong><span id="count">0</span> / 100</strong><div class="progress"><div class="bar" id="bar"></div></div></div>
+<img class="mazu" id="mazu" src="mazu.png" alt="金色光影中的媽祖聖像">
+<div class="flame-field" aria-hidden="true"><i class="flame"></i><i class="flame"></i><i class="flame"></i><i class="flame"></i></div>
+<div class="censer"><div class="handle left"></div><div class="handle right"></div><div class="lid"></div><div class="censer-bowl"></div><div class="leg l"></div><div class="leg r"></div><div class="foot"></div></div>
+<div class="paper-tray"></div><canvas id="fx"></canvas>
+</section>
+<div id="message" aria-live="polite">金紙已備妥，點擊下方按鈕投入金爐。</div>
+<div class="controls"><button class="throw" id="throwBtn">✦ 丟入紙錢（剩餘 100 張）</button><button class="reset" id="resetBtn">重新祈願</button></div>
+<p class="hint">每次投入一張紙錢，金爐將綻放金色祝福粒子。累計 100 張後，媽祖聖像將伴隨鐘聲與和聲顯現。<br>音效可隨時關閉；此為文化主題互動體驗。</p>
+</main>
+<script>
+(()=>{
+const $=id=>document.getElementById(id), stage=$('stage'),canvas=$('fx'),ctx=canvas.getContext('2d');
+let count=0,particles=[],flying=[],soundOn=true,mazuShown=false,audioCtx=null,noiseBuffer=null;
+function resize(){const r=stage.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);canvas.width=r.width*d;canvas.height=r.height*d;ctx.setTransform(d,0,0,d,0,0)}
+new ResizeObserver(resize).observe(stage);resize();
+function audio(){if(!soundOn)return null;try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume();return audioCtx}catch(e){return null}}
+function paperSound(){const a=audio();if(!a)return;const n=Math.floor(a.sampleRate*.24);if(!noiseBuffer||noiseBuffer.length!==n){noiseBuffer=a.createBuffer(1,n,a.sampleRate);const d=noiseBuffer.getChannelData(0);for(let i=0;i<n;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/n,1.8)}const src=a.createBufferSource(),filter=a.createBiquadFilter(),gain=a.createGain();src.buffer=noiseBuffer;filter.type='bandpass';filter.frequency.value=1500;filter.Q.value=.7;gain.gain.setValueAtTime(.0001,a.currentTime);gain.gain.linearRampToValueAtTime(.12,a.currentTime+.025);gain.gain.exponentialRampToValueAtTime(.0001,a.currentTime+.23);src.connect(filter);filter.connect(gain);gain.connect(a.destination);src.start()}
+function chime(freq,when,dur,vol,type='sine'){const a=audio();if(!a)return;const o=a.createOscillator(),g=a.createGain();o.type=type;o.frequency.setValueAtTime(freq,when);g.gain.setValueAtTime(.0001,when);g.gain.linearRampToValueAtTime(vol,when+.04);g.gain.exponentialRampToValueAtTime(.0001,when+dur);o.connect(g);g.connect(a.destination);o.start(when);o.stop(when+dur+.03)}
+function mazuSound(){const a=audio();if(!a)return;const t=a.currentTime;[261.63,329.63,392,523.25].forEach((f,i)=>chime(f,t+i*.22,4.5,.035));[880,1174.66].forEach((f,i)=>chime(f,t+.5+i*.35,3.8,.055,'sine'));chime(660,t+.05,3.4,.045,'triangle');}
+function burst(x,y){for(let i=0;i<24;i++){const a=Math.random()*Math.PI*2,s=1.1+Math.random()*4;particles.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-1,life:45+Math.random()*30,max:75,size:1+Math.random()*3,hue:35+Math.random()*18})}}
+function toss(){if(count>=100)return;count++;$('count').textContent=count;$('bar').style.width=count+'%';$('throwBtn').textContent=count===100?'✦ 祈願圓滿':'✦ 丟入紙錢（剩餘 '+(100-count)+' 張）';$('message').textContent=count<100?'紙錢已投入，金色祝福正在升起……':'百份心意已入金爐，恭迎媽祖聖像。';paperSound();const r=stage.getBoundingClientRect();flying.push({x:r.width*.24,y:r.height*.77,vx:r.width*.012,vy:-r.height*.025,life:36,rot:-.3});burst(r.width*.5,r.height*.67);if(count===100&&!mazuShown){mazuShown=true;setTimeout(()=>{$('mazu').classList.remove('show');void $('mazu').offsetWidth;$('mazu').classList.add('show');mazuSound();$('message').textContent='媽祖慈光顯現，願庇佑平安、諸事順遂。';},650)}}
+$('throwBtn').addEventListener('click',toss);
+$('resetBtn').addEventListener('click',()=>{count=0;mazuShown=false;particles=[];flying=[];$('count').textContent='0';$('bar').style.width='0%';$('throwBtn').disabled=false;$('throwBtn').textContent='✦ 丟入紙錢（剩餘 100 張）';$('message').textContent='金紙已備妥，點擊下方按鈕投入金爐。';$('mazu').classList.remove('show')});
+$('soundBtn').addEventListener('click',()=>{soundOn=!soundOn;$('soundBtn').textContent=soundOn?'♫ 音效：開啟':'♫ 音效：關閉';if(soundOn){const a=audio();if(a)chime(523,a.currentTime,.3,.025)}});
+function draw(){const w=stage.clientWidth,h=stage.clientHeight;ctx.clearRect(0,0,w,h);
+for(let i=flying.length-1;i>=0;i--){const p=flying[i];p.x+=p.vx;p.y+=p.vy;p.vy+=.18;p.life--;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot+=.05);ctx.fillStyle='#f7d77f';ctx.shadowColor='#ffc44e';ctx.shadowBlur=12;ctx.fillRect(-12,-8,24,16);ctx.strokeStyle='#9c4c19';ctx.lineWidth=1;ctx.strokeRect(-12,-8,24,16);ctx.restore();if(p.life<=0){burst(p.x,p.y);flying.splice(i,1)}}
+for(let i=particles.length-1;i>=0;i--){const p=particles[i];p.x+=p.vx;p.y+=p.vy;p.vy+=.035;p.vx*=.985;p.life--;ctx.globalAlpha=Math.max(0,p.life/p.max);ctx.fillStyle=`hsl(${p.hue},95%,${55+Math.random()*25}%)`;ctx.shadowColor='#ffd45c';ctx.shadowBlur=10;ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,Math.PI*2);ctx.fill();if(p.life<=0)particles.splice(i,1)}
+ctx.globalAlpha=1;ctx.shadowBlur=0;requestAnimationFrame(draw)}
+draw();
+})();
+</script></body></html>
